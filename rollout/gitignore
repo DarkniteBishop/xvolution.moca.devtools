@@ -1,0 +1,31 @@
+#Ignored directories if need to track, just remove from list
+3rdparty/*
+bin/*
+build/*
+config/*
+downloads/*
+!downloads/forms
+files/*
+forms/*
+install/*
+javalib/*
+lib/*
+log/*
+makefiles/*
+MEDIA/*
+oraclereports/*
+samples/*
+scripts/*
+temp/*
+tools/*
+webclient/*
+##The following two lines work together to ignore everything in the data folder except the ws directory
+data/*
+!data/ws
+mtfclient/*
+!mtfclient/src
+.*
+/*.*
+/Rollouts
+
+config.properties
