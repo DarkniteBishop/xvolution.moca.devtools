@@ -1,13 +1,15 @@
 @echo off
 
+cmd /K "cd %ENVDIR%"
+
 REM ----------------------------------------------------------------------------
 REM Setup environment variables.
 REM ----------------------------------------------------------------------------
-set DEVTOOLS=C:\mad2ga\dev\devtools
-set ENV_DIR=C:\mad2ga\dev\BlueYonder
-set PATH=%PATH%;%DEVTOOLS%\bin
+REM set DEVTOOLS=C:\mad2ga\dev\devtools
+REM set ENV_DIR=C:\mad2ga\dev\BlueYonder
+REM set PATH=%PATH%;%DEVTOOLS%\bin
 
-cd %ENV_DIR%
+REM cd %ENVDIR%
 
 
 REM ----------------------------------------------------------------------------
