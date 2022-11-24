@@ -1,9 +1,9 @@
 @echo off
 
-if not %ENV_DIR%x == x goto continue 
+if not %ENVDIR%x == x goto continue 
 
 echo.
-echo You must configure the ENV_DIR variable.
+echo You must configure the ENVDIR variable.
 echo.
 goto end
 
@@ -17,11 +17,12 @@ goto list
 
 :continue
 SET MOCA_ENVNAME=%1
-SET ENV_DATA=%ENV_DIR%\%MOCA_ENVNAME%\LES\data
+SET ENV_DATA=%ENVDIR%\%MOCA_ENVNAME%\LES\data
 
-IF NOT EXIST %ENV_DATA% GOTO INVALIDENV
+IF NOT EXIST %ENV_DATA% GOTO invalidenv
 CD %ENV_DATA%
 call env.bat
+CD %LESDIR%
 goto end
 
 :invalidenv
@@ -33,7 +34,7 @@ goto list
 :list
 echo Installed Instances:
 echo.
-dir %ENV_DIR% /AD/D/B
+dir %ENVDIR% /AD/D/B
 goto end
 
 :end
